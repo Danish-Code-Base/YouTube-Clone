@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+}
+
+.header {
+    max-height: 5.6rem;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+}
+
+.menu-icon {
+    justify-content: center;
+}
+
+.youtube-icon {
+    padding: 1.8rem 1.4rem 1.8rem 1.6rem;
+}
+
+.youtube-icon span {
+    font-weight: 0;
+    position: relative;
+    bottom: 1rem;
+    left: 0.5rem;
+    color: #212121;
+    font-size: 1rem;
+}
+
+.youtube-icon svg {
+    width: 9rem;
+    height: 2rem;
+}
+
+.hover:hover {
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.center {
+    flex: 0 1 732px;
+    min-width: 0;
+}
+
+.yt-search-box {
+    height: 4rem;
+    flex: 1;
+    margin-left: 4rem;
+    padding: 0 0.4rem;
+}
+
+.search-bar {
+    box-sizing: border-box;
+    padding: 0 0.4rem 0 1.6rem;
+    border: 1px solid #cccccc;
+    border-radius: 4rem 0 0 4rem;
+    border-right: none;
+    height: 100%;
+    flex: 1;
+    margin-left: 3.2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    font-size: 1.6rem;
+    flex: 1;
+    height: 2.6rem;
+    outline: none;
+    border: none;
+}
+
+.search-icon {
+    box-sizing: border-box;
+    height: 100%;
+    width: 64px;
+    height: 40px;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 4rem 4rem 0;
+    background-color: #f8f8f8;
+    padding: 0.1rem 0.6rem;
+}
+
+.microphone {
+    margin-left: 16px;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+}
+
+.end {
+    min-width: 225px;
+    justify-content: flex-end;
+}
+
+.create-video {
+    justify-content: center;
+    margin-right: 0.8rem;
+}
+
+.notification {
+    justify-content: center;
+    margin-right: 0.8rem;
+}
+
+.profile {
+    padding: 0.1rem 0.6rem;
+}
+
+.profile img {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0 0.8rem;
+    border-radius: 50%;
+}
+
+.container {
+    height: 300vh;
+}
+
+
+@media (max-width: 657px) {
+    .center {
+        justify-content: flex-end;
+    }
+
+    .yt-search-box {
+        flex: none;
+        margin: 0;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .search-icon {
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-icon:hover {
+        background-color: #e5e5e5;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .microphone,
+    .create-video,
+    .notification {
+        background-color: transparent;
+        margin: 0;
+    }
+
+    .end {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 428px) {
+    .header {
+        padding: 0 8px;
+    }
+
+    .microphone,
+    .notification {
+        display: none;
+    }
+}
