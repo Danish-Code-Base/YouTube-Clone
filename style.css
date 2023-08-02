@@ -24,10 +24,21 @@ svg {
     width: 4rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* header css */
+
 .header {
     max-height: 5.6rem;
     justify-content: space-between;
     padding: 0 1.6rem;
+    position: fixed;
+    width: 98%;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
 }
 
 .menu-icon {
@@ -135,10 +146,397 @@ svg {
     border-radius: 50%;
 }
 
-.container {
-    height: 300vh;
+/* sidebar css */
+
+.sidebar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    /* overflow: hidden; */
+    overflow-y: auto;
+    transition: all 0.1s ease;
+    /* margin-top: 56px; */
 }
 
+.open {
+    left: -100%;
+    transition: all 0.1s ease;
+}
+
+.sidebar-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1.2rem;
+    width: 240px;
+    box-sizing: border-box;
+}
+
+.main-sidebar>div,
+.collapsible-sidebar>div {
+    width: calc(100% - 12px);
+}
+
+.main-sidebar a,
+.collapsible-sidebar a {
+    font-size: 1.4rem;
+    color: #0f0f0f;
+    padding: 0 1.2rem;
+    min-height: 4rem;
+    border-radius: 1rem;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.home a {
+    background-color: #f2f2f2;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 600;
+    color: #0f0f0f;
+    line-height: 2rem;
+}
+
+.home a:hover {
+    background-color: #e6e6e6;
+}
+
+.sidehover:hover {
+    background-color: #f2f2f2;
+}
+
+div a svg,
+div a img {
+    margin-right: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.collapsible-sidebar a img {
+    border-radius: 50%;
+}
+
+.main-sidebar a span,
+.collapsible-sidebar a span {
+    flex: 1;
+}
+
+.mp-12 {
+    padding-top: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.b-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.heading {
+    padding: 6px 12px 4px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+#footer {
+    box-sizing: border-box;
+    width: inherit;
+}
+
+.primary-links {
+    padding: 16px 24px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.secondary-links {
+    padding: 12px 24px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#footer a {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    color: #606060;
+    margin-right: 8px;
+}
+
+.sidebar-container .start {
+    padding-left: 1.6rem;
+}
+
+.copyright {
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: #909090;
+}
+
+/* mini sidebar css*/
+.mini-sidebar {
+    /* margin-top: 60px; */
+    display: inline-block;
+    padding: 0 4px;
+    position: fixed;
+    left: -100%;
+    box-sizing: border-box;
+    min-height: 100%;
+    transition: all 0.1s ease;
+    /* bottom: 0; */
+    /* justify-content: flex-start; */
+}
+
+.item-wrap {
+    flex-direction: column;
+    margin-top: 4px;
+
+}
+
+.close {
+    left: 0;
+    transition: all 0.1s ease;
+}
+
+.item a {
+    border-radius: 10px;
+    width: 64px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    color: #0f0f0f;
+    padding: 16px 0 14px;
+    min-height: 100%;
+    line-height: 1.4rem;
+}
+
+.item>a svg {
+    margin-bottom: 6px;
+    margin-right: 0;
+}
+
+/* Content css */
+
+.two-rows {
+    margin: 56px 0 0 240px;
+    overflow: hidden;
+    flex-direction: column;
+    flex: 1;
+}
+
+.f-header {
+    position: fixed;
+    /* position: sticky; */
+    top: 56px;
+    left: 240px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+}
+
+.leftP{
+    left: 76px;
+}
+
+.ml-76 {
+    margin-left: 76px;
+    transition: all 0.1s ease;
+}
+
+/* feed-filter css */
+
+.feed-filter {
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
+    width: 100%;
+    white-space: nowrap;
+}
+
+.feed-filter span {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.i-flex {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.feed-filter .ml-24,
+.feed-filter .ml-24 span {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.ff-item {
+    padding: 0 12px;
+    margin: 12px;
+    margin-left: 0;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    height: 32px;
+    cursor: pointer;
+}
+
+.ffhov:hover {
+    background-color: #e5e5e5;
+}
+
+.ml-24 {
+    margin-left: 2.4rem;
+}
+
+#right-arrow {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    height: 56px;
+    width: 56px;
+    justify-content: center;
+    right: 0;
+    background-color: #fff;
+}
+
+#right-arrow button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+}
+
+#right-arrow button:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+/* main content css video cards */
+
+.main-content {
+    padding-top: 24px;
+    margin-top: 0;
+    width: 100%;
+    margin-top: 48px;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-start; */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(311px, 1fr));
+    overflow: hidden; */
+}
+
+.cover {
+    margin: 0 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+    overflow: hidden;
+}
+
+.width-330 {
+    margin: 0 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    overflow: hidden;
+}
+
+.video-card {
+    margin: 0 8px;
+    margin-bottom: 40px;
+}
+
+.thumbnail {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.thumbnail>a img {
+    width: 100%;
+    height: 100%;
+}
+
+.channel-logo {
+    align-self: start;
+}
+
+.channel-logo>a img {
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 12px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.channel-detail>h3 {
+    margin: 12px 0 4px 0;
+}
+
+
+.title {
+    color: #0f0f0f;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.channel-data,
+.channel-data a,
+.badge {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #606060;
+    fill: currentColor;
+}
+
+.badge {
+    padding-left: 4px;
+
+}
+
+.badge svg {
+    height: 14px;
+    width: 14px;
+}
+
+.days::before {
+    content: "•";
+    margin: 0 4px;
+}
+
+.video-menu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -30px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.video-menu:hover {
+    background-color: #f2f2f2;
+}
+
+.video-menu>div {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+}
+
+.video-menu svg {
+    height: 24px;
+    width: 24px;
+}
+
+/* for Search bar response*/
 
 @media (max-width: 657px) {
     .center {
@@ -187,5 +585,90 @@ svg {
     .microphone,
     .notification {
         display: none;
+    }
+}
+
+/* for sidebar response */
+
+@media (max-width: 1312px) {
+
+    .cover {
+        margin: 0 16px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        overflow: hidden;
+    }
+
+    .mini-sidebar {
+        left: 0;
+    }
+
+    .close {
+        left: -100%;
+    }
+
+    .sidebar-container {
+        left: -200%;
+        background-color: #fff;
+    }
+
+    .open {
+        left: 0;
+    }
+
+    .two-rows {
+        margin: 56px 0 0 76px;
+    }
+
+    /* .main-content {
+        margin-left: 76px;
+    } */
+
+    /* for overlay effect */
+
+    .overlay {
+        position: fixed;
+        top: -100%;
+        left: -100%;
+        height: 1000vh;
+        width: 200%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.1s ease;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .open~.overlay {
+        opacity: 1;
+        left: 240px;
+        pointer-events: auto;
+    }
+
+}
+
+@media (max-width: 792px) {
+    .mini-sidebar {
+        display: none;
+    }
+
+    .two-rows {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 708px) {
+    .cover {
+        margin: 0 16px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(330px, 500px));
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .video-menu {
+        top: -18px;
+        left: 100px;
     }
 }
